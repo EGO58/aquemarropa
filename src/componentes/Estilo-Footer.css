@@ -1,0 +1,49 @@
+.footer {
+    background-color: #011F26;
+    padding: 20px;
+    text-align: left;
+    bottom: 0;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.footer p {
+    
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+
+    color: #fff;
+    opacity: 0.4;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    height: 100%;
+}
+
+.icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    opacity: 0.4;
+}
+
+.icon:hover {
+    color: #F2357B;
+}
+
+.logo-container {
+    margin-top: 50px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}

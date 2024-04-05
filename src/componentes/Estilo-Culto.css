@@ -1,0 +1,90 @@
+.culto {
+    background-color: #fff;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 50px;
+}
+
+.culto h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 65px;
+    color: #F2357B;
+    margin: 0px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.culto h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 65px;
+    color: #F2357B;
+    margin: 0px;
+}
+
+.culto h3 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 65px;
+    color: #592A4D;
+    margin: 0px;
+    padding-bottom: 50px;
+}
+
+.culto p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: #592A4D;
+    margin: 0px;
+    padding-bottom: 80px;
+}
+
+.image-container {
+    margin-right: 5px;
+}
+
+.img-presentacion {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    column-gap: 1px;
+    height: 100%;
+}
+
+.icon-culto {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    background-color: #592A4D;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.icon-culto:hover {
+    color: #F2357B;
+}
+
+.image-container-galeria {
+    padding-top: 25px;
+}
+
+.img-galeria {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,47 @@
+.padrinos {
+    background-color: #011F26;
+    padding-right: 250px;
+    padding-left: 250px;
+    padding-bottom: 50px;
+}
+
+.padrinos h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    color: #F2357B;
+    margin: 0px;
+}
+
+.padrinos h3 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: #fff;
+    margin: 0px;
+}
+
+.titulo-acordeon {
+    font-family: "IBM Plex Mono", monospace !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 15px !important;
+    color: #F2357B !important;
+    background-color: #011F26 !important;
+}
+
+.image-container-ganadores {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan a una nueva línea */
+    justify-content: center;
+}
+
+.img-ganadores {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+

@@ -1,0 +1,53 @@
+.definicion {
+    background-color: #011F26;
+    padding-right: 250px;
+    padding-bottom: 50px;
+}
+
+.definicion h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 100px;
+    line-height: 65px;
+    color: #fff;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+}
+
+.definicion p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+    color: #fff;
+    margin: 0px;
+    padding-left: 60px;
+}
+
+.img-definicion {
+    width: 100%;
+    height: auto;
+}
+
+.social-icons-definicion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1px;
+    height: 20%;
+}
+
+.icon-definicion {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    background-color: #F2357B;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.icon-definicion:hover {
+    color: #592A4D;
+}

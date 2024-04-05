@@ -1,0 +1,10 @@
+<svg id="icon-mail" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.342" height="26.182" viewBox="0 0 32.342 26.182">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_18" data-name="Rectángulo 18" width="32.342" height="26.182" fill="#f2357b"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_9" data-name="Grupo 9" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Trazado_7" data-name="Trazado 7" d="M3.234,25.874a3.12,3.12,0,0,1-2.285-.949A3.12,3.12,0,0,1,0,22.64V3.234A3.12,3.12,0,0,1,.949.949,3.12,3.12,0,0,1,3.234,0H29.108a3.12,3.12,0,0,1,2.285.949,3.12,3.12,0,0,1,.949,2.285V22.64a3.241,3.241,0,0,1-3.234,3.234ZM29.108,6.468,17.02,14.028a1.733,1.733,0,0,1-.425.183,1.53,1.53,0,0,1-.847,0,1.733,1.733,0,0,1-.425-.183L3.234,6.468V22.64H29.108ZM16.171,11.32,29.108,3.234H3.234ZM3.234,6.468v0Z" transform="translate(0 0.308)" fill="#f2357b"/>
+  </g>
+</svg>

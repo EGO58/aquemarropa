@@ -11,7 +11,7 @@ import Repositorio from './componentes/Repositorio';
 import Registro from './componentes/Registro';
 
 
-function App() {
+function App() { 
   return (
     <div className="App">
       {/* Contenido principal de tu aplicación */}

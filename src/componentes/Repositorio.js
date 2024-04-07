@@ -1,5 +1,5 @@
 import React from 'react';
-import './Estilo-Padrinos.css';
+import './Estilo-Repositorio.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -53,21 +53,21 @@ function Padrinos() {
 
                         <Row md={3}>
                             <Col>
-                                <h3>
+                                <h2>
                                     #01
-                                </h3>
+                                </h2>
                             </Col>
 
                             <Col>
-                                <h3>
+                                <h2>
                                     #02
-                                </h3>
+                                </h2>
                             </Col>
 
                             <Col>
-                                <h3>
+                                <h2>
                                     #03
-                                </h3>
+                                </h2>
                             </Col>
                         </Row>
 

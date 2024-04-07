@@ -1,8 +1,15 @@
 .registro {
     background-color: #011F26;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 10%;
+    padding-left: 10%;
     padding-bottom: 50px;
+}
+
+
+@media (max-width: 768px) {
+.registro {
+    background-color: #011F26;
+}
 }
 
 .registro h1 {

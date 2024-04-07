@@ -1,11 +1,16 @@
-.padrinos {
-    background-color: #011F26;
-    padding-right: 250px;
-    padding-left: 250px;
+.repositorio {
+    padding-right: 10%;
+    padding-left: 10%;
     padding-bottom: 50px;
 }
 
-.padrinos h1 {
+@media (max-width: 768px) {
+.repositorio {
+    background-color: #011F26;
+}
+}
+
+.repositorio h1 {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 800;
     font-style: normal;
@@ -14,7 +19,7 @@
     margin: 0px;
 }
 
-.padrinos h3 {
+.repositorio h2 {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;

@@ -1,8 +1,14 @@
 .recomendados {
     background-color: #fff;
-    padding-left: 250px;
-    padding-right: 250px;
     padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 768px) {
+.recomendados {
+    background-color: #fff;
+}
 }
 
 .cards-recomendacion {
@@ -12,7 +18,7 @@
 }
 
 .gap-2 {
-    gap: 30px;
+    gap: 20px;
 }
 
 .recomendados h1 {
@@ -39,12 +45,11 @@
 
 .recomendados h3 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 200;
+    font-weight: 400;
     font-style: normal;
     font-size: 12px;
     color: #fff;
-    margin: 0px;
-    padding-top: 55px;
+    margin-left: -80px;
 }
 
 .image-container-recomendados {
@@ -57,8 +62,17 @@
     height: auto;
 }
 
+.image-container-recomendados-cards {
+
+}
+
 .img-recomendados-cards {
     border-radius: 5px;
-    width: 100%;
+    width: 65%;
     height: auto;
+}
+
+.horizontal-center {
+    display: flex;
+    justify-content: center;
 }

@@ -1,8 +1,15 @@
 .reto {
     background-color: #011F26;
+    padding-bottom: 50px;
+
+}
+
+@media (max-width: 768px) {
+.reto {
+    background-color: #011F26;
     /*padding-left: 15%;
     padding-right: 15%;*/
-    padding-bottom: 50px;
+    }
 }
 
 .reto h1 {
@@ -42,6 +49,7 @@
 
 .container {
     display: flex;
+    align-content: center;
 }
 
 .container2 {

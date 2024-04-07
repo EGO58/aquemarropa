@@ -1,9 +1,18 @@
 .culto {
     background-color: #fff;
-    padding-left: 250px;
-    padding-right: 250px;
     padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
+
+@media (max-width: 768px) {
+.culto {
+    background-color: #fff;
+    /*padding-left: 15%;
+    padding-right: 15%;*/
+    }
+}
+
 
 .culto h1 {
     font-family: "IBM Plex Mono", monospace;
@@ -35,7 +44,6 @@
     line-height: 65px;
     color: #592A4D;
     margin: 0px;
-    padding-bottom: 50px;
 }
 
 .culto p {

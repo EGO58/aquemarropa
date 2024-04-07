@@ -28,7 +28,7 @@ function Logia() {
 
                 <Stack gap={3}>
                     <div className="cards-logia">
-                        <Row>
+                        <Row className="horizontal-center align-items-center">
                             <Col>
                                 <div className="image-container-logia">
                                     <img src={FotoAndres} alt="Foto Andres" className="img-logia" />
@@ -48,7 +48,7 @@ function Logia() {
                     </div>
 
                     <div className="cards-logia">
-                        <Row>
+                        <Row className="horizontal-center align-items-center">
                             <Col>
                                 <div className="image-container-logia">
                                     <img src={FotoDiego} alt="Foto Diego" className="img-logia" />
@@ -68,7 +68,7 @@ function Logia() {
                     </div>
 
                     <div className="cards-logia">
-                        <Row>
+                        <Row className="horizontal-center align-items-center">
                             <Col>
                                 <div className="image-container-logia">
                                     <img src={FotoAna} alt="Foto Ana" className="img-logia" />

@@ -29,6 +29,11 @@ function Reecomendados() {
                             <div className="image-container-recomendados">
                                 <img src={PosterPelicula} alt="Poster Pelicula" className="img-recomendados" />
                             </div>
+
+                            <h2>
+                                Película:<br />
+                                Poor Things - Yorgos Lanthimos
+                            </h2>
                             {/* poor thing poster*/}
                         </Col>
 
@@ -36,6 +41,11 @@ function Reecomendados() {
                             <div className="image-container-recomendados">
                                 <img src={PortadaLibro} alt="Portada Libro" className="img-recomendados" />
                             </div>
+
+                            <h2>
+                                Libro:<br />
+                                El Acto Creativo - Rick Rubin
+                            </h2>
                             {/* portada libro*/}
                         </Col>
                     </Row>
@@ -45,17 +55,17 @@ function Reecomendados() {
                     
                     <Col>
 
-                    <Stack gap={2}>
+                    <Stack gap={4}>
 
                         <div className="cards-recomendacion">
-                            <Row>
+                            <Row className="horizontal-center align-items-center">
                                 <Col>
                                     <div className="image-container-recomendados-cards">
                                         <img src={PortadaPodcast} alt="Portada Podcast" className="img-recomendados-cards" />
                                     </div>
                                 </Col>
-                                    
-                                <Col md={8}>
+
+                                <Col>
                                     <div>
                                         <h3>
                                             Podcast:<br />
@@ -68,14 +78,14 @@ function Reecomendados() {
 
 
                         <div className="cards-recomendacion">
-                            <Row>
+                            <Row className="horizontal-center align-items-center">
                                 <Col>
                                     <div className="image-container-recomendados-cards">
                                         <img src={PortadaArtista} alt="Portada Artista" className="img-recomendados-cards" />
                                     </div>
                                 </Col>
                                     
-                                <Col md={8}>
+                                <Col>
                                     <div>
                                         <h3>
                                             Banda/Artista:<br />
@@ -94,22 +104,6 @@ function Reecomendados() {
                 
                 </Col>
 
-            </Row>
-
-            <Row md={4}>
-                <Col>
-                    <h2>
-                        Película:<br />
-                        Poor Things - Yorgos Lanthimos
-                    </h2>
-                </Col>
-
-                <Col>
-                    <h2>
-                        Libro:<br />
-                        El Acto Creativo - Rick Rubin
-                    </h2>
-                </Col>
             </Row>
 
         </div>

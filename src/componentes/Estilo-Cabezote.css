@@ -1,0 +1,74 @@
+.Head{ 
+    background-color:#592a4d;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*height: 100%;*/
+}
+
+
+.logo {
+  float: left; /* Alinea el logo a la izquierda */
+  margin-right: 200px; /* Añade un margen entre el logo y la lista del menú */
+}
+
+.logo img {
+  max-height: 40px; /* Ajusta la altura máxima del logo según sea necesario */
+  vertical-align: middle; /* Alinea verticalmente el logo */
+}
+.menu {
+    text-align: center;
+  }
+
+  .seleccionado a {
+    background-color: #f2357b;
+    padding: 5px;
+    border-radius: 2px;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+  }
+  
+  .menu ul li {
+    display: inline-block;
+    margin-right:60px;
+  }
+  
+  .menu ul li:last-child {
+    margin-right:0;
+  }
+  
+  /* Tipografias y Color*/
+  .menu ul li a {
+    text-decoration: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: normal; /* Cambia la tipografía */
+    color: #fff; /* Cambia el color del texto */
+  }
+  
+.loginmenu{
+  float: right; /* Alinea el logo a la izquierda */
+  margin-right: 0px; 
+}
+
+  .loginmenu a {
+  margin-left: 200px; 
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal; /* Cambia la tipografía */
+    color: #f2357b;
+  }
+
+  .loginmenu img {
+  vertical-align: middle;
+  float: right;
+  margin-left: 10px;
+  margin-right: 0px;
+  weight: auto;
+  height: 20px;
+  }
+

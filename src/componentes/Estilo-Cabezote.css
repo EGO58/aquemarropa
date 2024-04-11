@@ -1,3 +1,4 @@
+
 .Head{ 
     background-color:#592a4d;
     height: 80px;
@@ -17,7 +18,8 @@
   max-height: 40px; /* Ajusta la altura máxima del logo según sea necesario */
   vertical-align: middle; /* Alinea verticalmente el logo */
 }
-.menu {
+
+  menu {
     text-align: center;
   }
 
@@ -71,4 +73,3 @@
   weight: auto;
   height: 20px;
   }
-

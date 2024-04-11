@@ -18,7 +18,6 @@ function Cabezote() {
                         <li><a href="#nosotros">Nosotros</a></li>
                         <li><a href="#trabajos">Trabajos</a></li>
                         <li><a href="#culto">Culto</a></li>
-                        <li><a href="#tienda">Tienda</a></li>
                     </ul>
                 </div>
 

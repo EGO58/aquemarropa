@@ -15,7 +15,7 @@ function Cabezote() {
                     
                     <ul>
                         <li className='seleccionado'><a href="#inicio">Inicio</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href={`/nosotros`}>Nosotros</a></li>
                         <li><a href="#trabajos">Trabajos</a></li>
                         <li><a href="#culto">Culto</a></li>
                     </ul>

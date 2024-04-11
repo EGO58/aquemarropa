@@ -9,6 +9,7 @@ import Logia from './componentes/Logia';
 import Padrinos from './componentes/Padrinos';
 import Repositorio from './componentes/Repositorio';
 import Registro from './componentes/Registro';
+import Cabezote from './componentes/Cabezote';
 
 
 function App() { 
@@ -16,7 +17,7 @@ function App() {
     <div className="App">
       {/* Contenido principal de tu aplicación */}
       <header>
-        <h1>AQUEMARROPA</h1>
+        <Cabezote></Cabezote>
       </header>
       <main>
         <Reto></Reto>

@@ -1,4 +1,5 @@
 .repositorio {
+    background-color: #011F26;
     padding-right: 10%;
     padding-left: 10%;
     padding-bottom: 50px;
@@ -12,35 +13,54 @@
 
 .repositorio h1 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 800;
+    font-weight: 800 !important;
     font-style: normal;
     font-size: 40px;
-    color: #F2357B;
+    color: #F2357B !important;
     margin: 0px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 .repositorio h2 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
+    font-weight: 400 ;
     font-style: normal;
-    font-size: 10px;
+    font-size: 20px;
     color: #fff;
-    margin: 0px;
+    padding-top: 10px;
 }
 
-.titulo-acordeon {
-    font-family: "IBM Plex Mono", monospace !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    font-size: 15px !important;
+
+.accordion-header.titulo-acordeon {
     color: #F2357B !important;
     background-color: #011F26 !important;
+}
+
+.accordion-header.titulo-acordeon:focus {
+    background-color: #F2357B !important;
+    color: #011F26 !important;
+}
+
+.accordion .accordion-button {
+    font-size: inherit;
+    color: #F2357B;
+}
+
+.accordion .accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #F2357B;
+}
+
+.accordion-body {
+    background-color: #592a4d;
 }
 
 .image-container-ganadores {
     display: flex;
     flex-wrap: nowrap; /* Evita que las imágenes se envuelvan a una nueva línea */
     justify-content: center;
+    
 }
 
 .img-ganadores {

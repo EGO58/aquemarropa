@@ -1,7 +1,7 @@
-import './App.css';
-import Repositorio from './componentes/Repositorio';
-import Cabezote from './componentes/Cabezote';
-import Footer from './componentes/Footer';
+import '../App.css';
+import Repositorio from './/Repositorio';
+import Cabezote from './Cabezote';
+import Footer from './Footer';
 
 
 function trabajos () { 

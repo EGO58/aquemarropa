@@ -1,6 +1,6 @@
-import './App.css';
-import Cabezote from './componentes/Cabezote';
-import Footer from './componentes/Footer';
+import '../App.css';
+import Cabezote from './Cabezote';
+import Footer from './Footer';
 
 
 function cultop() { 

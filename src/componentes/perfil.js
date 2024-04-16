@@ -1,7 +1,7 @@
-import './App.css';
-import Cabezote from './componentes/Cabezote';
-import Footer from './componentes/Footer';
-import Registro from './componentes/Registro';
+import '../App.css';
+import Cabezote from './Cabezote';
+import Footer from './Footer';
+import Registro from './Registro';
 
 function perfil() { 
     return (

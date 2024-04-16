@@ -9,7 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Nosotros from './componentes/nosotros';
-
+import Trabajos from './componentes/trabajos';
+import Cultop from './componentes/cultop';
+import Perfil from './componentes/perfil';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +21,22 @@ const router = createBrowserRouter([
   {
     path: "/nosotros",
     element: <Nosotros />,
+  },
+
+
+  {
+    path: "/trabajos",
+    element: <Trabajos />,
+  },
+ 
+  {
+    path: "/cultop",
+    element: <Cultop />,
+  },
+
+  {
+    path: "/perfil",
+    element: <Perfil />,
   },
 ]);
 

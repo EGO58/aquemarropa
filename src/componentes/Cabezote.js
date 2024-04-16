@@ -14,16 +14,16 @@ function Cabezote() {
                 <div className="menu">
                     
                     <ul>
-                        <li className='seleccionado'><a href="#inicio">Inicio</a></li>
+                        <li className='seleccionado'><a href={`/`}>Inicio</a></li>
                         <li><a href={`/nosotros`}>Nosotros</a></li>
-                        <li><a href="#trabajos">Trabajos</a></li>
-                        <li><a href="#culto">Culto</a></li>
+                        <li><a href= {`/trabajos`}>Trabajos</a></li>
+                        <li><a href={`/culto`}>Culto</a></li>
                     </ul>
                 </div>
 
                 <div className='loginmenu'>
                 <ul> 
-                  <a href="#perfil"> Entrar </a>
+                  <a href={`/perfil`}> Entrar </a>
                   <img src={iconologin} alt="icono de login"/> 
                 </ul>
     

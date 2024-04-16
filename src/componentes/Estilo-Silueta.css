@@ -1,0 +1,129 @@
+.silueta {
+    background-color: #011F26;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 50px;
+}
+
+
+@media (max-width: 768px) {
+.silueta {
+    background-color: #011F26;
+}
+}
+
+.info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.silueta h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.silueta h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 30px;
+    color: #F2357B;
+}
+
+.silueta h3 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.arroba{
+    align-content: center;
+}
+
+.silueta h4 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.silueta h5 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 25px;
+    color: #F2357B;
+    padding-top: 10px;
+}
+
+.foto{
+    align-content: center;
+}
+
+.foto-perfil-container {
+    padding-right: 15px;
+}
+
+.foto-perfil {
+    width: 100%;
+    align-items: center;
+}
+
+.lista-trofeos {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+    display: flex; /* Hace que los elementos de la lista se muestren en línea */
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.lista-trofeos li {
+    margin-right: 20px; /* Espacio entre los elementos de la lista */
+}
+
+.lista-trofeos li img {
+    width: 45px; /* Ancho del icono del trofeo */
+    height: 45px; /* Alto del icono del trofeo */
+    border-radius: 50%; /* Hace que la imagen se muestre como un círculo */
+}
+
+.titulo {
+    position: relative; /* Para que la línea horizontal sea posicionada respecto a este elemento */
+    display: inline-block; /* Asegura que el título no tome todo el ancho disponible */
+}
+
+.decoracion {
+    position: absolute; /* Posiciona la línea horizontal absolutamente dentro del contenedor */
+    top: 50%; /* Posiciona la línea en el centro verticalmente respecto al título */
+    left: calc(100% + 10px); /* Posiciona la línea al lado derecho del título, ajusta el margen según sea necesario */
+    transform: translateY(1000%); /* Centra verticalmente la línea */
+    width: 450px;; /* Ajusta la longitud de la línea según sea necesario */
+    border-top: 1px solid #592A4D; /* Estilo de la línea (ancho, tipo y color) */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);; /* Define columnas flexibles */
+    gap: 20px; /* Espacio entre las cajas de los posts */
+}
+
+.post {
+    padding-top: 20px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.post img {
+    max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+    height: auto; /* Hace que la altura de la imagen se ajuste automáticamente para mantener la proporción */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+}

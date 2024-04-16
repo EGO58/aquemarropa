@@ -10,6 +10,7 @@ import Padrinos from './componentes/Padrinos';
 import Repositorio from './componentes/Repositorio';
 import Registro from './componentes/Registro';
 import Cabezote from './componentes/Cabezote';
+import Silueta from './componentes/Silueta';
 
 
 function App() { 
@@ -20,15 +21,8 @@ function App() {
         <Cabezote></Cabezote>
       </header>
       <main>
-        <Reto></Reto>
-        <Culto></Culto>
-        <Recomendados></Recomendados>
-        <Definicion></Definicion>
-        <Logia></Logia>
-        <Padrinos></Padrinos>
-        <Repositorio></Repositorio>
-        {/* Contenido principal de tu aplicación */}
-        <Registro></Registro>
+        
+        <Silueta></Silueta>
       </main>
       {/* Footer */}
       <Footer></Footer>

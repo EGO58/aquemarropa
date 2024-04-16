@@ -20,6 +20,13 @@ function Registro() {
                     AQUEMARROPA
                 </h1>
             </Col>
+        </Row>
+
+
+        <Row>
+            <Col>
+            
+            </Col>
 
             <Col xs={4} className="registro-form">
 

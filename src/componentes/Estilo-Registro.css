@@ -16,9 +16,8 @@
     font-family: "IBM Plex Mono", monospace;
     font-weight: 800;
     font-style: normal;
-    font-size: 50;
+    font-size: 50px;
     color: #fff;
-    padding-bottom: 20px;
     padding-top: 50px;
 }
 
@@ -33,7 +32,7 @@
 
 .registro h3 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-size: 20px;
     color: #F2357B;
@@ -43,7 +42,7 @@
 
 .registro h4 {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-size: 20px;
     color: #fff;
@@ -64,7 +63,7 @@
 .registro-form {
     background-color: #011F26;
     padding-bottom: 50px;
-    padding-top: 100px; /* Ajusta el espacio entre el encabezado y el formulario */
+    padding-top: 50px; /* Ajusta el espacio entre el encabezado y el formulario */
     text-align: center; /* Falta corregir */
 }
 

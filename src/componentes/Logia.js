@@ -8,6 +8,17 @@ import FotoAndres from '../assets/foto-andres.png'
 import FotoDiego from '../assets/foto-diego.png'
 import FotoAna from '../assets/foto-ana.png'
 import IconoOjo from '../assets/icono-ojo.svg'
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import app  from '..';
+const db = getFirestore(app);
+
+async function getCities(db) {
+  const citiesCol = collection(db, 'cities');
+  const citySnapshot = await getDocs(citiesCol);
+  const cityList = citySnapshot.docs.map(doc => doc.data());
+  return cityList;
+}
 
 
 function Logia() {

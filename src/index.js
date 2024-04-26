@@ -12,6 +12,24 @@ import Nosotros from './componentes/nosotros';
 import Trabajos from './componentes/trabajos';
 import Cultop from './componentes/cultop';
 import Perfil from './componentes/perfil';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCmyttSMeya7vhjoqOo6RGP4c-vIqHgDQE",
+  authDomain: "aquemarropa2-f91c8.firebaseapp.com",
+  projectId: "aquemarropa2-f91c8",
+  storageBucket: "aquemarropa2-f91c8.appspot.com",
+  messagingSenderId: "192674429185",
+  appId: "1:192674429185:web:f6023aa263669cedc9c300",
+  measurementId: "G-MVDRRQ3ZN8"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+export default app;
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,23 +67,11 @@ root.render(
 
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyD4b2jqZXQiZNRMMnYWAVqY1mM7C1TH-pA",
-  authDomain: "aquemarropa-4f5d1.firebaseapp.com",
-  projectId: "aquemarropa-4f5d1",
-  storageBucket: "aquemarropa-4f5d1.appspot.com",
-  messagingSenderId: "957110858258",
-  appId: "1:957110858258:web:863170c84670e3e417decb"
-};
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

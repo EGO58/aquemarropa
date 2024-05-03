@@ -13,6 +13,20 @@ import PrimerLugar from '../assets/primer-lugar.jpg';
 import SegundoLugar from '../assets/segundo-lugar.jpg';
 import TercerLugar from '../assets/tercer-lugar.jpg';
 
+import { collection, getDocs } from "firebase/firestore"; 
+import db from '../config';
+
+const querySnapshot = await getDocs(collection(db, "Retos_semanales"));
+const retos = [];
+querySnapshot.forEach((doc) => {
+  const reto = {
+    id: doc.id,
+    descripcion: doc.data().descripcion_reto,
+    fecha: doc.data().fecha_publicacion
+  };
+  console.log(`${doc.id} => ${doc.data()}`);
+});
+
 function Repositorio() {
     return (
         <div className="repositorio">
@@ -27,6 +41,8 @@ function Repositorio() {
             </Row>
 
             <Accordion defaultActiveKey="0" flush>
+
+            {retos.map(retos =>
                 <Accordion.Item eventKey="0">
 
                     <Accordion.Header className="titulo-acordeon">
@@ -223,7 +239,7 @@ function Repositorio() {
                     </Accordion.Body>
 
                 </Accordion.Item>
-                
+              )}
 
 
 

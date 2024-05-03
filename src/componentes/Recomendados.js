@@ -8,11 +8,6 @@ import PosterPelicula from '../assets/poor-things-poster.png'
 import PortadaLibro from '../assets/rick-rubin-portada.jpg'
 import PortadaPodcast from '../assets/portada-podcast.jpg'
 import PortadaArtista from '../assets/portada-artista.jpg'
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import app  from '..';
-const db = getFirestore(app);
-
 
 
 

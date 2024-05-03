@@ -11,6 +11,7 @@ import Repositorio from './componentes/Repositorio';
 import Registro from './componentes/Registro';
 import Cabezote from './componentes/Cabezote';
 import Silueta from './componentes/Silueta';
+import { getFirestore } from "firebase/firestore";
 
 
 function App() { 

@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCmyttSMeya7vhjoqOo6RGP4c-vIqHgDQE",
@@ -14,4 +15,9 @@ const firebaseConfig = {
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
-  export default db;
+  const storage = getStorage(app, "gs://aquemarropa2-f91c8.appspot.com");
+  const conexiones = {
+    db: db,
+    storage: storage
+  };
+  export default conexiones;

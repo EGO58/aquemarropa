@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useState, useEffect  } from 'react';
 import './Estilo-Repositorio.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -15,37 +15,6 @@ import TercerLugar from '../assets/tercer-lugar.jpg';
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import conexiones from '../config';
-
-const q = query(collection(conexiones.db, "Retos_semanales"));
-const querySnapshot = await getDocs(q);
-const retos = [];
-querySnapshot.forEach(async (doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    const participantes = [];
-    const id = doc.id;
-    const qp = query(collection(conexiones.db, `Retos_semanales/${id}/Participantes`));
-    const querySnapshotP = await getDocs(qp);
-
-    querySnapshotP.forEach(docp => {
-        participantes.push({
-            'id': docp.id,
-            'datos': docp.data()}
-        );
-        console.log(docp.id, " p => ", docp.data());
-    });
-
-
-    console.log(doc.id, " => ", doc.data());
-    retos.push(
-        {
-            'id': doc.id,
-            'datos': doc.data(),
-            'participantes': participantes
-        }
-    );
-  });
-
-
 
 /*
 querySnapshot.forEach(async (doc) => {
@@ -72,16 +41,33 @@ querySnapshot.forEach(async (doc) => {
 });*/
 
 
-console.log('Estos son los retos => ', retos);
+const Repositorio = () => {
+    const [collectionData, setCollectionData] = useState([]);
 
-function Repositorio() {
-    const [test, setTest] = useState(retos);
 
-    setTimeout(() => {
-        setTest(retos);
-        alert('mostrando');
-    }, 4000);
-   
+    useEffect(() => {
+        const getCollectionData = async () => {
+
+            const q = query(collection(conexiones.db, "Retos_semanales"));
+            const querySnapshot = await getDocs(q);
+            const retos = [];
+            querySnapshot.forEach(async (doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                const id = doc.id;
+                console.log(doc.id, " => ", doc.data());
+                retos.push(
+                    {
+                        'id': doc.id,
+                        'datos': doc.data(),
+                    }
+                );
+            }); 
+          
+          setCollectionData(retos);
+        };
+        getCollectionData();
+        console.log('coleccion estraida', collectionData);
+      }, []);
 
     return (
         <div className="repositorio">
@@ -91,7 +77,7 @@ function Repositorio() {
                     <h1>
                         Retos<br />
                         Aquemarropa
-                
+                   
                     </h1>
                 </Col>
             </Row>
@@ -101,7 +87,7 @@ function Repositorio() {
             <Accordion defaultActiveKey="0" flush>
                 
                 {
-                    test.map(reto => 
+                    collectionData.map(reto => 
                     
                         <Accordion.Item eventKey="0">
 

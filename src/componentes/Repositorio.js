@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState } from 'react';
 import './Estilo-Repositorio.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -13,16 +13,38 @@ import PrimerLugar from '../assets/primer-lugar.jpg';
 import SegundoLugar from '../assets/segundo-lugar.jpg';
 import TercerLugar from '../assets/tercer-lugar.jpg';
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
-import { collection, getDocs } from "firebase/firestore"; 
+import { collection, query, where, getDocs } from "firebase/firestore";
 import conexiones from '../config';
 
-const querySnapshot = await getDocs(collection(conexiones.db, "Retos_semanales"));
-const retoscol = conexiones.db.collection('Retos_semanales').get();
+const q = query(collection(conexiones.db, "Retos_semanales"));
+const querySnapshot = await getDocs(q);
 const retos = [];
+querySnapshot.forEach(async (doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    const participantes = [];
+    const id = doc.id;
+    const qp = query(collection(conexiones.db, `Retos_semanales/${id}/Participantes`));
+    const querySnapshotP = await getDocs(qp);
 
-for (const doc in retoscol.docs) {
-    console.log(doc);
-}
+    querySnapshotP.forEach(docp => {
+        participantes.push({
+            'id': docp.id,
+            'datos': docp.data()}
+        );
+        console.log(docp.id, " p => ", docp.data());
+    });
+
+
+    console.log(doc.id, " => ", doc.data());
+    retos.push(
+        {
+            'id': doc.id,
+            'datos': doc.data(),
+            'participantes': participantes
+        }
+    );
+  });
+
 
 
 /*
@@ -53,6 +75,14 @@ querySnapshot.forEach(async (doc) => {
 console.log('Estos son los retos => ', retos);
 
 function Repositorio() {
+    const [test, setTest] = useState(retos);
+
+    setTimeout(() => {
+        setTest(retos);
+        alert('mostrando');
+    }, 4000);
+   
+
     return (
         <div className="repositorio">
         
@@ -61,207 +91,217 @@ function Repositorio() {
                     <h1>
                         Retos<br />
                         Aquemarropa
+                
                     </h1>
                 </Col>
             </Row>
 
+        
+
             <Accordion defaultActiveKey="0" flush>
-
-            {retos.map(reto =>
-                <Accordion.Item eventKey={reto.id}>
-
-                    <Accordion.Header className="titulo-acordeon">
-                        
-                            Una pascua muy EGGS-pecial
-                        
-                    </Accordion.Header>
-
-                    <Accordion.Body>
-
-                        <Row>
-                           {
-                            reto.participantes.map(participante => 
-                                <Col>
-                                <div className="image-container-ganadores">
-                                    <img src={PrimerLugar} alt="Primer Lugar" className="img-ganadores" />
-                                </div>
-                            </Col>
-                            )
-                           }
-                            
-                        
-
-                        </Row>
-
-                        <Row md={3}>
-                            <Col>
-                                <h2>
-                                    #01
-                                </h2>
-                            </Col>
-
-                            <Col>
-                                <h2>
-                                    #02
-                                </h2>
-                            </Col>
-
-                            <Col>
-                                <h2>
-                                    #03
-                                </h2>
-                            </Col>
-                        </Row>
+                
+                {
+                    test.map(reto => 
                     
-                    <Row>
-                        <Col>
+                        <Accordion.Item eventKey="0">
 
-                        <Carousel>
-
-                            <Carousel.Item>
+                        <Accordion.Header className="titulo-acordeon">
+                            
+                                {reto.datos.nombre}
+                            
+                        </Accordion.Header>
+    
+                        <Accordion.Body>
+    
+                            <Row>
+                                <Col>
                                     <div className="image-container-ganadores">
-                                        <img src={ConejoRojo} alt="Conejo Rojo" className="img-ganadores" />
+                                        <img src={PrimerLugar} alt="Primer Lugar" className="img-ganadores" />
                                     </div>
-                                <Carousel.Caption>
-                                        <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
+                                </Col>
+    
+                                <Col>
                                     <div className="image-container-ganadores">
-                                        <img src={ConejoBlanco} alt="Conejo Blanco" className="img-ganadores" />
+                                        <img src={SegundoLugar} alt="Segundo Lugar" className="img-ganadores" />
                                     </div>
-                                <Carousel.Caption>
-                                        <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
+                                </Col>
+    
+                                <Col>
                                     <div className="image-container-ganadores">
-                                        <img src={ConejoCafe} alt="Conejo Cafe" className="img-ganadores" />
+                                        <img src={TercerLugar} alt="Tercer Lugar" className="img-ganadores" />
                                     </div>
-                                <Carousel.Caption>
-                                    <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoNegro} alt="Conejo Negro" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                    <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                        </Carousel>
-
-                        </Col>
-
-
-                        <Col>
-
-                        <Carousel>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoRojo} alt="Conejo Rojo" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                        <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoBlanco} alt="Conejo Blanco" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                        <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoCafe} alt="Conejo Cafe" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                    <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoNegro} alt="Conejo Negro" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                    <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            </Carousel>
-
-
-                        </Col>
-
-
-                        <Col>
-
-                        <Carousel>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoRojo} alt="Conejo Rojo" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                        <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoBlanco} alt="Conejo Blanco" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                        <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoCafe} alt="Conejo Cafe" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                    <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                    <div className="image-container-ganadores">
-                                        <img src={ConejoNegro} alt="Conejo Negro" className="img-ganadores" />
-                                    </div>
-                                <Carousel.Caption>
-                                    <p>@artista</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-
-                            </Carousel>
-
-
-                        </Col>
-
-
-                    </Row>
-
+                                </Col>
+    
+                            </Row>
+    
+                            <Row md={3}>
+                                <Col>
+                                    <h2>
+                                        #01
+                                    </h2>
+                                </Col>
+    
+                                <Col>
+                                    <h2>
+                                        #02
+                                    </h2>
+                                </Col>
+    
+                                <Col>
+                                    <h2>
+                                        #03
+                                    </h2>
+                                </Col>
+                            </Row>
                         
-
-                    </Accordion.Body>
-
-                </Accordion.Item>
-              )}
-
-
-
+                        <Row>
+                            <Col>
+    
+                            <Carousel>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoRojo} alt="Conejo Rojo" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                            <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoBlanco} alt="Conejo Blanco" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                            <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoCafe} alt="Conejo Cafe" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                        <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoNegro} alt="Conejo Negro" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                        <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                            </Carousel>
+    
+                            </Col>
+    
+    
+                            <Col>
+    
+                            <Carousel>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoRojo} alt="Conejo Rojo" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                            <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoBlanco} alt="Conejo Blanco" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                            <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoCafe} alt="Conejo Cafe" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                        <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoNegro} alt="Conejo Negro" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                        <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                </Carousel>
+    
+    
+                            </Col>
+    
+    
+                            <Col>
+    
+                            <Carousel>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoRojo} alt="Conejo Rojo" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                            <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoBlanco} alt="Conejo Blanco" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                            <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoCafe} alt="Conejo Cafe" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                        <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                <Carousel.Item>
+                                        <div className="image-container-ganadores">
+                                            <img src={ConejoNegro} alt="Conejo Negro" className="img-ganadores" />
+                                        </div>
+                                    <Carousel.Caption>
+                                        <p>@artista</p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+    
+                                </Carousel>
+    
+    
+                            </Col>
+    
+    
+                        </Row>
+    
+                            
+    
+                        </Accordion.Body>
+    
+                    </Accordion.Item>
+                
+                )
+                }
                 
                 
             </Accordion>

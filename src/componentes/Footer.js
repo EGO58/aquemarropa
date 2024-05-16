@@ -23,9 +23,9 @@ function Footer() {
 
                 <Col>
                     <p>
-                        Términos y Condiciones<br />
-                        Servicio al Cliente<br />
-                        Política de Privacidad<br />
+                        <a href="/terminos-y-condiciones" class="link">Términos y Condiciones</a> <br />
+                        <a href="/servicio-al-cliente" class="link">Servicio al Cliente</a> <br/>
+                        <a href="/politica-de-privacidad" class="link">Política de Privacidad</a> <br />
                         <br />
                         Calle 101A ·68-84│Candelaria<br />
                         aquemarropa@gmail.com<br />

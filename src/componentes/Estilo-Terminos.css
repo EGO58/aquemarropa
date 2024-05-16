@@ -1,0 +1,40 @@
+.terminos {
+    background-color: #011F26;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+.terminos {
+    background-color: #011F26;
+}
+}
+
+.terminos h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+    color: #F2357B;
+    padding-top: 50px;
+}
+
+.terminos h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 16px;
+    color: #fff;
+}
+
+.terminos p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+    color: #fff;
+    margin: 0px;
+    padding-top: 40px;
+    padding-right: 350px;
+}

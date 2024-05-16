@@ -100,24 +100,17 @@ const Repositorio = () => {
                         <Accordion.Body>
     
                             <Row>
-                                <Col>
+                            {
+                                reto.datos.participantes.map(participante => 
+                                    <Col>
                                     <div className="image-container-ganadores">
-                                        <img src={PrimerLugar} alt="Primer Lugar" className="img-ganadores" />
+                                        <img src={participante.foto} alt="Primer Lugar" className="img-ganadores" />
                                     </div>
-                                </Col>
-    
-                                <Col>
-                                    <div className="image-container-ganadores">
-                                        <img src={SegundoLugar} alt="Segundo Lugar" className="img-ganadores" />
-                                    </div>
-                                </Col>
-    
-                                <Col>
-                                    <div className="image-container-ganadores">
-                                        <img src={TercerLugar} alt="Tercer Lugar" className="img-ganadores" />
-                                    </div>
-                                </Col>
-    
+                                    </Col>
+                                )
+                                
+                            }
+                               
                             </Row>
     
                             <Row md={3}>

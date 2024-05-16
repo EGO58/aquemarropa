@@ -12,6 +12,9 @@ import Nosotros from './componentes/nosotros';
 import Trabajos from './componentes/trabajos';
 import Cultop from './componentes/cultop';
 import Perfil from './componentes/perfil';
+import Terminos from './componentes/Terminos';
+import Servicio from './componentes/Servicio';
+import Privacidad from './componentes/Privacidad';
 
 
 // Initialize Firebase
@@ -40,6 +43,21 @@ const router = createBrowserRouter([
   {
     path: "/perfil",
     element: <Perfil />,
+  },
+
+  {
+    path: "/terminos-y-condiciones",
+    element: <Terminos/>,
+  },
+
+  {
+    path: "/servicio-al-cliente",
+    element: <Servicio/>,
+  },
+
+  {
+    path: "/politica-de-privacidad",
+    element: <Privacidad/>,
   },
 ]);
 

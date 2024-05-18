@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import FotoAndres from '../assets/foto-andres.png'
-import FotoDiego from '../assets/foto-diego.png'
-import FotoAna from '../assets/foto-ana.png'
+import FotoAndres from '../assets/Andi.png'
+import FotoDiego from '../assets/Diego.png'
+import FotoAna from '../assets/Anaquin.png'
 import IconoOjo from '../assets/icono-ojo.svg'
 
 
@@ -38,7 +38,7 @@ function Logia() {
                             <Col md={8}>
                                 <div>
                                     <h3>
-                                        Desinner<br />
+                                        <h4>DES1NNER</h4>
                                         Andrés Estrada<br />
                                         Diseñador Crossmedia
                                     </h3>
@@ -58,7 +58,7 @@ function Logia() {
                             <Col md={8}>
                                 <div>
                                     <h3>
-                                        EGO<br />
+                                        <h4>EG0</h4>
                                         Diego Ramírez<br />
                                         Diseñador Crossmedia
                                     </h3>
@@ -78,7 +78,7 @@ function Logia() {
                             <Col md={8}>
                                 <div>
                                     <h3>
-                                        Aqua<br />
+                                        <h4>AN4QUIN</h4>
                                         Ana Quintero<br />
                                         Diseñadora Crossmedia
                                     </h3>

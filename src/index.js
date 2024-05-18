@@ -15,6 +15,7 @@ import Perfil from './componentes/perfil';
 import Terminos from './componentes/Terminos';
 import Servicio from './componentes/Servicio';
 import Privacidad from './componentes/Privacidad';
+import Cultos from './componentes/Cultos';
 
 
 // Initialize Firebase
@@ -58,6 +59,15 @@ const router = createBrowserRouter([
   {
     path: "/politica-de-privacidad",
     element: <Privacidad/>,
+  },
+    {
+    path: "/politica-de-privacidad",
+    element: <Privacidad/>,
+  },
+
+  {
+    path: "/cultos",
+    element: <Cultos/>,
   },
 ]);
 

@@ -20,19 +20,14 @@ function Definicion() {
 
             <Col md={7}>
                 <h1>
-                    AQUEMARROPA
+                    4QU3M4RR0P4
                 </h1>
                 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+                    Imagina una aplicación revolucionaria diseñada para liberar todo tu potencial creativo.
+                    Eso es AQUEMARROPA, una aplicación que ha llegado para exterminar bloqueos, combatir la procrastinación y hacer de la creatividad tu mayor hábito.<br/>
                     <br/>
-                    Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Por medio de desafíos periódicos, fomentaremos la capacidad de plasmar ideas y retarse a sí mismo, así como la colaboración con marcas nacionales e internacionales, la visibilización y la pertenencia a la comunidad creativa latinoamericana.
                 </p>
 
                     <div className="social-icons-definicion">

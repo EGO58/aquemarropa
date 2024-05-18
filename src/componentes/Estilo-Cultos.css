@@ -1,0 +1,20 @@
+.cultos {
+    background-color: #011F26;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+.cultos{
+    background-color: #011F26;
+}
+}
+
+.img-ojo {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
 import './Estilo-Servicio.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -6,8 +7,32 @@ import Col from 'react-bootstrap/Col';
 import Telefono from '../assets/telefono.png';
 import Cabezote from './Cabezote';
 import Footer from './Footer';
+import conexiones from '../config';
 
 function Servicio() {
+
+    const [tema, setTema] = useState('');
+    const [email, setEmail] = useState('');
+    const [mensaje, setMensaje] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const docRef = await addDoc(collection(conexiones.db, "solicitudes"), {
+                tema: tema,
+                email: email,
+                mensaje: mensaje,
+                timestamp: new Date()
+            });
+            alert("Solicitud enviada correctamente!");
+        } catch (e) {
+            console.error("Error al enviar la solicitud: ", e);
+            alert("Hubo un error al enviar la solicitud. Por favor, inténtalo de nuevo.");
+        }
+    };
+
+
     return (
       <div>
 
@@ -40,30 +65,32 @@ function Servicio() {
                     <br/>
                 </p>
 
-            <div className='formulario'>
+            <form onSubmit={handleSubmit}>
+                <div className='formulario'>
 
-                <select class="form-select form-select-sm" aria-label="Small select example">
-                    <option selected>Elige un Tema</option>
-                    <option value="1">Obtener Ayuda</option>
-                    <option value="2">Comentarios Sobre la Aplicación AQUEMARROPA</option>
-                    <option value="3">Comentarios de Programación</option>
-                    <option value="4">Solicitud</option>
-                    <option value="4">Me Secuestraron :c </option>
-                </select>
+                <select className="form-select form-select-sm" aria-label="Small select example" value={tema} onChange={(e) => setTema(e.target.value)}>
+                        <option selected>Elige un Tema</option>
+                        <option value="1">Obtener Ayuda</option>
+                        <option value="2">Comentarios Sobre la Aplicación AQUEMARROPA</option>
+                        <option value="3">Comentarios de Programación</option>
+                        <option value="4">Solicitud</option>
+                        <option value="4">Me Secuestraron :c </option>
+                    </select>
 
-                <br/>
+                    <br/>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Dirección de Correo Electrónico</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com" />
+                    <div class="mb-3">
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Dirección de Correo Electrónico</label>
+                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label">¿Qué te gustaría compartir?</label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
+                    </div>
+
                 </div>
-
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">¿Qué te gustaría compartir?</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-
-            </div>
+            </form>
 
 
                 <h3>
@@ -74,8 +101,8 @@ function Servicio() {
 
                 <br/>
 
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary" className="boton-enviar" type="submit">Enviar</button>
+                <div className="d-grid gap-2">
+                    <button className="btn btn-primary" type="submit" onClick={handleSubmit}>Enviar</button>
                 </div>
 
             </Col>

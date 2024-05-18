@@ -69,20 +69,22 @@ function Silueta() {
                         <Row>
                             <Col>
                                 <h2>
-                                    Creativo O1
+                                    Mar Vázquez
                                 </h2>
                             </Col>
                             
                             <Col className="arroba">
                                 <h3>
-                                    @elartistaquees
+                                    @mar.art
                                 </h3>
                             </Col>
                         </Row>
 
                         <Row>
                             <h4>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et olore magna aliqua. Ut enim ad minim veniam.
+                            Artista visual e ilustradora 📚✨<br/>
+                            Transformando ideas en arte desde Medellín, Colombia 🇨🇴<br/>
+                            🌸 Creaciones únicas y personalizadas<br/>
                             </h4>
                         </Row>
 

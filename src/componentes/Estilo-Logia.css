@@ -16,8 +16,8 @@
     font-family: "IBM Plex Mono", monospace;
     font-weight: 800;
     font-style: normal;
-    font-size: 60px;
-    line-height: 65px;
+    font-size: 80px;
+    line-height: 80px;
     color: #F2357B;
     margin: 0px;
     padding-top: 180px;
@@ -30,13 +30,23 @@
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
-    color: #fff;
+    color: #592A4D;
     padding-top: 5px;
     padding-left: 10px;
 }
 
+.logia h4{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 30px;
+    color: #592A4D;
+    padding-top: 5px;
+    
+}
+
 .cards-logia{
-    background-color: #592A4D;
+    background-color: #F2357B;
     border-radius: 5px;
 }
 

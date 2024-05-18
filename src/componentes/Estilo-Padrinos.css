@@ -29,9 +29,8 @@
 }
 
 .galeria img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    opacity: 0.5;
 }

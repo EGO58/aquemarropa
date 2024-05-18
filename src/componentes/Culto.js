@@ -42,7 +42,7 @@ function Culto() {
                         </h3>
                         
                         <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit taciti neque, consequat curae libero tortor eu tincidunt nec fames, venenatis eleifend senectus class euismod dictum quis urna. Iaculis porttitor integer nulla neque curabitur facilisis torquent, consequat senectus gravida vivamus dignissim vel, ut in primis molestie sociis aliquam.
+                        Diseñador Crossmedia apasionado y experimentado en el ámbito audiovisual. Con una habilidad excepcional para fusionar diferentes medios de comunicación, desde gráficos hasta video y sonido, Dessiner crea experiencias visuales y narrativas cautivadoras y memorables. Su enfoque creativo y su destreza técnica le permiten desarrollar proyectos innovadores que sobresalen en diversos contextos, desde campañas publicitarias hasta proyectos de branding. Su pasión por el diseño y su profundo conocimiento del lenguaje audiovisual lo convierten en un profesional versátil, que continúa inspirando con su creatividad y su capacidad para contar historias.
                         </p>
 
                         <div className="social-icons">

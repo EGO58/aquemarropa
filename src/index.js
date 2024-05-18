@@ -16,6 +16,8 @@ import Terminos from './componentes/Terminos';
 import Servicio from './componentes/Servicio';
 import Privacidad from './componentes/Privacidad';
 import Silueta from './componentes/Silueta';
+import Cultos from './componentes/Cultos';
+
 
 // Initialize Firebase
 const router = createBrowserRouter([
@@ -63,6 +65,17 @@ const router = createBrowserRouter([
   {
     path: "/Silueta",
     element: <Silueta/>,
+  
+  },
+
+  {
+    path: "/politica-de-privacidad",
+    element: <Privacidad/>,
+  },
+
+  {
+    path: "/cultos",
+    element: <Cultos/>,
   },
 ]);
 

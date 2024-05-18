@@ -10,7 +10,7 @@ function nosotros() {
       <div className="nosotros">
         {/* Contenido principal de tu aplicación */}
         <header>
-          <Cabezote />
+          <Cabezote ruta='nosotros' />
         </header>
         <main>
          

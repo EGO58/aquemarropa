@@ -19,11 +19,13 @@ function App() {
     <div className="App">
       {/* Contenido principal de tu aplicación */}
       <header>
-        <Cabezote></Cabezote>
+        <Cabezote ruta='inicio'></Cabezote>
       </header>
       <main>
-        
-        <Silueta></Silueta>
+      <Reto></Reto>
+      <Culto></Culto>
+      <Recomendados></Recomendados>
+
       </main>
       {/* Footer */}
       <Footer></Footer>

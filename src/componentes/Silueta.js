@@ -1,5 +1,7 @@
 import React from 'react';
 import './Estilo-Silueta.css';
+import Cabezote from './Cabezote';
+import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,6 +22,8 @@ import imagen6 from '../assets/post-06.jpg';
 
 function Silueta() {
 
+    
+
     const imagenesPosts = [
         { id: 1, src: imagen1, alt: 'Descripción de la imagen 1' },
         { id: 2, src: imagen2, alt: 'Descripción de la imagen 2' },
@@ -31,8 +35,13 @@ function Silueta() {
       ];
 
     return (
+
+
       <div className="silueta">
 
+    <header>
+        <Cabezote></Cabezote>
+    </header>
         <Row>
             <Col>
                 <h1>
@@ -177,7 +186,10 @@ function Silueta() {
 
         </Row>
 
+     <Footer></Footer>
+                                        
       </div>
+
 
 );
 }

@@ -2,8 +2,7 @@
     background-color: #011F26;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 50px;
-    padding-top: 80px;
+
 }
 
 @media (max-width: 768px) {
@@ -12,9 +11,9 @@
 }
 }
 
-.img-ojo {
-    border-radius: 5px;
-    width: 100%;
-    height: auto;
+.image-container-ojo {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }

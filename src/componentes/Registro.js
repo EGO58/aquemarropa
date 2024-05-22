@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Estilo-Registro.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,8 +9,29 @@ import IconoPerfil from '../assets/icono-perfil.svg';
 import IconoCorreo from '../assets/icono-correo.svg';
 import IconoContrasena from '../assets/icono-contrasena.svg';
 import Correo from '../assets/logo-gmail-registro.jpg';
+import conexiones from '../config';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
 
 function Registro() {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+          await signInWithEmailAndPassword(conexiones.auth, email, password);
+          alert('Login successful');
+          window.open('/Silueta','_self');
+        } catch (error) {
+          alert(error.message);
+        }
+      };
+
+
+    
+
     return (
       <div className="registro">
 
@@ -49,7 +70,7 @@ function Registro() {
                         <img src={IconoCorreo} alt="Icono Correo" className="icono-registro" /> Correo
                     </Form.Label>
 
-                    <Form.Control type="email" placeholder="Correo" />
+                    <Form.Control type="email" value= {email} placeholder="Correo" onChange={(e) => setEmail(e.target.value)} />
 
                     <Form.Text className="text-muted">
                         Nunca compartiremos tu correo con alguien más.
@@ -61,7 +82,7 @@ function Registro() {
                         <img src={IconoContrasena} alt="Icono Contrasena" className="icono-registro" /> Contraseña
                     </Form.Label>
 
-                    <Form.Control type="password" placeholder="Contraseña" />
+                    <Form.Control type="password" value={password} placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="forms" controlId="formBasicCheckbox">
@@ -78,7 +99,7 @@ function Registro() {
                     </div>
                 </div>
 
-                <Button variant="" className="boton-registro" type="submit">
+                <Button variant="" className="boton-registro" type="submit" onClick={handleLogin} href={`/Silueta`}>
                     Registrarme
                 </Button>
 

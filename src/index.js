@@ -15,6 +15,7 @@ import Perfil from './componentes/perfil';
 import Terminos from './componentes/Terminos';
 import Servicio from './componentes/Servicio';
 import Privacidad from './componentes/Privacidad';
+import Silueta from './componentes/Silueta';
 import Cultos from './componentes/Cultos';
 
 
@@ -60,7 +61,14 @@ const router = createBrowserRouter([
     path: "/politica-de-privacidad",
     element: <Privacidad/>,
   },
-    {
+
+  {
+    path: "/Silueta",
+    element: <Silueta/>,
+  
+  },
+
+  {
     path: "/politica-de-privacidad",
     element: <Privacidad/>,
   },

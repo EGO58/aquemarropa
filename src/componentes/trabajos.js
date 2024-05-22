@@ -10,7 +10,7 @@ function trabajos () {
       <div className="trabajos">
         {/* Contenido principal de tu aplicación */}
         <header>
-          <Cabezote></Cabezote>
+          <Cabezote ruta='trabajos'></Cabezote>
         </header>
         <main>
           <Repositorio></Repositorio>

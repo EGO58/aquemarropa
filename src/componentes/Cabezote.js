@@ -1,13 +1,14 @@
 import './Estilo-Cabezote.css';
 import logo from '../assets/p-ojo-cabezote.png';
 import iconologin from '../assets/iconloginhome.png';
+import Cultos from './Cultos';
 
 
 function Cabezote({ruta}) {
     let inicio = '';
     let nosotros = '';
     let trabajos = '';
-    let culto = '';
+    let Cultos = '';
 
     if (ruta == 'inicio') {
         inicio = 'seleccionado';
@@ -21,8 +22,8 @@ function Cabezote({ruta}) {
         trabajos = 'seleccionado';
     }
 
-    if (ruta == 'culto') {
-        culto = 'seleccionado';
+    if (ruta == 'cultos') {
+        Cultos = 'seleccionado';
     }
 
 
@@ -43,7 +44,7 @@ function Cabezote({ruta}) {
                         <li className={inicio}><a href={`/`}>Inicio</a></li>
                         <li className={nosotros}><a href={`/nosotros`}>Nosotros</a></li>
                         <li className={trabajos}><a href= {`/trabajos`}>Trabajos</a></li>
-                        <li><a href={`/culto`}>Culto</a></li>
+                        <li className={Cultos}><a href={`/Cultos`}>Culto</a></li>
                     </ul>
                 </div>
 

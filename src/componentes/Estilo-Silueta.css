@@ -127,3 +127,13 @@
     height: auto; /* Hace que la altura de la imagen se ajuste automáticamente para mantener la proporción */
     display: block; /* Asegura que la imagen se muestre como un bloque */
 }
+
+.logo-container {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}

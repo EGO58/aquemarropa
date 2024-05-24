@@ -17,6 +17,7 @@ import imagen3 from '../assets/post-03.jpg';
 import imagen4 from '../assets/post-04.jpg';
 import imagen5 from '../assets/post-05.jpg';
 import imagen6 from '../assets/post-06.jpg';
+import logo from '../assets/logo-aquemarropa.png';
 
 
 
@@ -44,9 +45,9 @@ function Silueta() {
     </header>
         <Row>
             <Col>
-                <h1>
-                    AQUEMARROPA
-                </h1>
+                <div className="logo-container">
+                    <img src={logo} alt="Logo Aquemarropa" className="logo" />
+                </div>
             </Col>
         </Row>
 

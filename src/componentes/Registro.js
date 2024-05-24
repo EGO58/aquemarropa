@@ -38,7 +38,7 @@ function Registro() {
         <Row>
             <Col>
                 <h1>
-                    AQUEMARROPA
+                    4QU3M4RR0P4
                 </h1>
             </Col>
         </Row>

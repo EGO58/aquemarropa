@@ -35,16 +35,16 @@ function Footer() {
 
                 <Col>
                      <div className="social-icons">
-                        <a href="https://www.instagram.com/">
+                        <a href="https://www.instagram.com/rockero_estrada/">
                         <FontAwesomeIcon icon={faInstagram} className="icon" />
                         </a>
-                        <a href="https://https://web.https://www.tiktok.com/explore.com/">
+                        <a href="https://www.tiktok.com/@desinner______?lang=es">
                         <FontAwesomeIcon icon={faTiktok} className="icon" />
                         </a>
                         <a href="https://https://web.whatsapp.com/">
                         <FontAwesomeIcon icon={faWhatsapp} className="icon" />
                         </a>
-                        <a href="https://twitter.com/">
+                        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0/">
                         <FontAwesomeIcon icon={faTwitter} className="icon" />
                         </a>
                     </div>

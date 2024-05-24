@@ -1,15 +1,14 @@
 .reto {
     background-color: #011F26;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 50px;
-
 }
 
 @media (max-width: 768px) {
 .reto {
     background-color: #011F26;
-    /*padding-left: 15%;
-    padding-right: 15%;*/
-    }
+}
 }
 
 .reto h1 {

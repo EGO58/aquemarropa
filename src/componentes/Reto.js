@@ -11,6 +11,7 @@ function Reto() {
         <Container fluid className="reto">
 
             <Row>
+                <Col></Col>
                 <Col>
                     <div>
                         <h1>
@@ -43,6 +44,8 @@ function Reto() {
 
                 </Col>
 
+                <Col></Col>
+
                 <Col>
                     <div>
                         <h2>
@@ -57,6 +60,7 @@ function Reto() {
 
                     </div>
                 </Col>
+                <Col></Col>
             </Row>
           
 

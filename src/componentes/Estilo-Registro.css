@@ -16,9 +16,10 @@
     font-family: "IBM Plex Mono", monospace;
     font-weight: 800;
     font-style: normal;
-    font-size: 50px;
-    color: #fff;
+    font-size: 40px;
+    color: #F2357B;
     padding-top: 50px;
+    opacity: 0.7;
 }
 
 .registro h2 {

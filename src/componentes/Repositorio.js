@@ -104,7 +104,7 @@ const Repositorio = () => {
                                 reto.datos.participantes.map(participante => 
                                     <Col>
                                     <div className="image-container-ganadores">
-                                        <img src={participante.foto} alt="Primer Lugar" className="img-ganadores" />
+                                        <img src={participante.imageUrl} alt="Primer Lugar" className="img-ganadores" />
                                     </div>
                                     </Col>
                                 )

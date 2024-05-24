@@ -3,7 +3,7 @@ import './Estilo-Definicion.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ImgDefinicion from '../assets/banner-definicion.jpg'
+import ImgDefinicion from '../assets/imagen-definicion.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTwitter, faInstagram, faWhatsapp, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
@@ -31,16 +31,16 @@ function Definicion() {
                 </p>
 
                     <div className="social-icons-definicion">
-                        <a href="https://www.instagram.com/">
+                        <a href="https://www.instagram.com/rockero_estrada/">
                         <FontAwesomeIcon icon={faInstagram} className="icon-definicion" />
                         </a>
-                        <a href="https://https://web.https://www.tiktok.com/explore.com/">
+                        <a href="https://www.tiktok.com/@desinner______?lang=es">
                         <FontAwesomeIcon icon={faTiktok} className="icon-definicion" />
                         </a>
                         <a href="https://https://web.whatsapp.com/">
                         <FontAwesomeIcon icon={faWhatsapp} className="icon-definicion" />
                         </a>
-                        <a href="https://twitter.com/">
+                        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
                         <FontAwesomeIcon icon={faTwitter} className="icon-definicion" />
                         </a>
                     </div>

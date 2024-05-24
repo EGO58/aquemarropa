@@ -9,7 +9,7 @@ import ImgGaleria02 from '../assets/imagen-galeria-02.png'
 import ImgGaleria03 from '../assets/imagen-galeria-03.png'
 import ImgGaleria04 from '../assets/imagen-galeria-04.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTwitter, faInstagram, faWhatsapp, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import {faTwitter, faInstagram, faWhatsapp, faTiktok, faBehance } from '@fortawesome/free-brands-svg-icons';
 
 function Culto() {
     return (
@@ -42,20 +42,20 @@ function Culto() {
                         </h3>
                         
                         <p>
-                        Diseñador Crossmedia apasionado y experimentado en el ámbito audiovisual. Con una habilidad excepcional para fusionar diferentes medios de comunicación, desde gráficos hasta video y sonido, Dessiner crea experiencias visuales y narrativas cautivadoras y memorables. Su enfoque creativo y su destreza técnica le permiten desarrollar proyectos innovadores que sobresalen en diversos contextos, desde campañas publicitarias hasta proyectos de branding. Su pasión por el diseño y su profundo conocimiento del lenguaje audiovisual lo convierten en un profesional versátil, que continúa inspirando con su creatividad y su capacidad para contar historias.
+                        Diseñador crossmedia apasionado y experimentado en el ámbito audiovisual. Con una habilidad excepcional para fusionar diferentes medios de comunicación, desde gráficos hasta video y sonido, Dessiner crea experiencias visuales y narrativas cautivadoras y memorables.
                         </p>
 
                         <div className="social-icons">
-                            <a href="https://www.instagram.com/">
+                            <a href="https://www.instagram.com/desinner______/">
                             <FontAwesomeIcon icon={faInstagram} className="icon-culto" />
                             </a>
-                            <a href="https://https://web.https://www.tiktok.com/explore.com/">
+                            <a href="https://www.tiktok.com/@desinner______?lang=es">
                             <FontAwesomeIcon icon={faTiktok} className="icon-culto" />
                             </a>
-                            <a href="https://https://web.whatsapp.com/">
-                            <FontAwesomeIcon icon={faWhatsapp} className="icon-culto" />
+                            <a href="https://www.behance.net/desinner___">
+                            <FontAwesomeIcon icon={faBehance} className="icon-culto" />
                             </a>
-                            <a href="https://twitter.com/">
+                            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
                             <FontAwesomeIcon icon={faTwitter} className="icon-culto" />
                             </a>
                         </div>

@@ -13,7 +13,7 @@ function Cultos() {
         <div>
 
         <header>
-          <Cabezote></Cabezote>
+          <Cabezote ruta='Cultos'/>
         </header>
 
       <div className="cultos">

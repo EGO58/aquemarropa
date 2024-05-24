@@ -22,7 +22,7 @@ function Cabezote({ruta}) {
         trabajos = 'seleccionado';
     }
 
-    if (ruta == 'cultos') {
+    if (ruta == 'Cultos') {
         Cultos = 'seleccionado';
     }
 

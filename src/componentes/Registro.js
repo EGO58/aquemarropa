@@ -11,12 +11,15 @@ import IconoContrasena from '../assets/icono-contrasena.svg';
 import Correo from '../assets/logo-gmail-registro.jpg';
 import conexiones from '../config';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 function Registro() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -28,6 +31,10 @@ function Registro() {
           alert(error.message);
         }
       };
+
+      const togglePasswordVisibility = () => { // Nueva línea
+        setShowPassword(!showPassword); // Nueva línea
+    };
 
 
     
@@ -82,12 +89,19 @@ function Registro() {
                         <img src={IconoContrasena} alt="Icono Contrasena" className="icono-registro" /> Contraseña
                     </Form.Label>
 
-                    <Form.Control type="password" value={password} placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} />
+                    <div className="password-container">
+                        <Form.Control 
+                            type={showPassword ? "text" : "password"} 
+                            value={password} 
+                            placeholder="Contraseña" 
+                            onChange={(e) => setPassword(e.target.value)} 
+                        />
+                        <Button variant="link" onClick={togglePasswordVisibility} className="eye-button">
+                            <i className={showPassword ? "fas fa-eye-slash" : "fas fa-eye"}></i>
+                        </Button>
+                    </div>
                 </Form.Group>
 
-                <Form.Group className="forms" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Recordar" />
-                </Form.Group>
 
                 <h4>
                     ——————  o  ——————

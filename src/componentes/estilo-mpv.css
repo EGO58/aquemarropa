@@ -1,0 +1,38 @@
+.mpv {
+    background-color: #011f26;
+    padding-bottom: 50px;
+  }
+  
+  
+  @media (max-width: 700px) {
+  .mpv {
+    background-color: #011f26;
+  }
+  }
+  
+  .image-container {
+    width: 40%; /* Ancho de la imagen */
+    margin-left: 15%; /* Aumentamos el margen entre la imagen y el video */
+  }
+  
+  
+  .titulo-mpv {
+    width: 170%;
+    height: auto;
+    margin-top: 10%; /* Ajusta según sea necesario */
+    margin-bottom: 0%;
+  }
+  
+  .video-container{
+    width: 30%; /* Ancho del contenedor del video */
+    margin-right: 15%; /* Reducimos el margen a la izquierda del contenedor del video */
+    margin-top: 15%; 
+    margin-bottom: 0%;
+  }
+  
+  .video-mpv {
+    width: 250%; /* Ancho del video */
+    height: 400px; /* Alto del video */
+    border-radius: 5px;
+  
+  }

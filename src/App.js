@@ -11,7 +11,9 @@ import Repositorio from './componentes/Repositorio';
 import Registro from './componentes/Registro';
 import Cabezote from './componentes/Cabezote';
 import Silueta from './componentes/Silueta';
+import Cta from './componentes/cta';
 import { getFirestore } from "firebase/firestore";
+import Mpv from './componentes/mpv';
 
 
 function App() { 
@@ -23,6 +25,8 @@ function App() {
       </header>
       <main>
       <Reto></Reto>
+      <Mpv></Mpv>
+      <Cta></Cta>
       <Culto></Culto>
       <Recomendados></Recomendados>
 

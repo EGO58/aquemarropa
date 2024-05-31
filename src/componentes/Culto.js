@@ -26,7 +26,7 @@ function Culto() {
 
             <Row>
                 <Col>
-                    <div className="image-container">
+                    <div className="image-container-4">
                         <img src={ImgPresentacion} alt="Imagen Presentacion" className="img-presentacion" />
                     </div>
                 </Col>

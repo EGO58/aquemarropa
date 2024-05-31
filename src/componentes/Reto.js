@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
 import './Estilo-Reto.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import conejo from '../assets/conejo-morado.png';
+import conejo from '../assets/conejo-morado-v2.png';
 import Button from 'react-bootstrap/Button';
+import ReactDOM from 'react-dom';
+import Countdown from 'react-countdown';
+
+const Completionist = () => <span>El reto a finalizado</span>;
+
 
 function Reto() {
     return (
@@ -12,6 +17,7 @@ function Reto() {
 
             <Row>
                 <Col></Col>
+
                 <Col>
                     <div>
                         <h1>
@@ -36,9 +42,9 @@ function Reto() {
 
                         </div>
 
-                        <h3>
+                        <h2>
                             *Aplican Términos y Condiciones*
-                        </h3>
+                        </h2>
 
                     </div>
 
@@ -48,18 +54,20 @@ function Reto() {
 
                 <Col>
                     <div>
-                        <h2>
-                            O3D:O2H:O3M
-                        </h2>
-
-                        <div class="container2">
-
-                        <Button variant="" className='boton'>Descargar rescursos</Button>{' '}
-
+                        <div>
+                            <Countdown className="contador" date={Date.now() + 912345678}>
+                                <Completionist />
+                            </Countdown>,
                         </div>
 
+                        <div className="container2">
+                            <a href="/Reto-Conejo.zip" download>
+                                <Button variant="" className='boton'>Descargar recursos</Button>
+                            </a>
+                        </div>
                     </div>
                 </Col>
+
                 <Col></Col>
             </Row>
           
